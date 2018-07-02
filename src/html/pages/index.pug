@@ -1,0 +1,48 @@
+extends ../layouts/application.pug
+
+block content
+  .page__wrapper
+    include ../components/aside.pug
+
+    main.page__content.content
+      section#jivosite-api.page__section.section
+        .section__info.section__part
+          h1.h1 JivoSite API для разработчиков
+          p JivoSite предоставляет разработчикам два набора инструментов для интеграции:
+          p
+            strong Клиентская часть - JavaScript API виджета
+            |, позволяющее управлять виджетом, который отображается пользователю. С помощью него можно управлять окном чата, а так же передавать произвольную информацию со страницы, на которой размещено окно чата, в приложение оператора (например, можно передать дополнительную информацию о пользователе, которая так же будет сохранена в журнале диалогов).
+          p
+            strong Серверная часть - Webhooks API
+            |, позволяющее получать уведомления о начале или завершении чата на стороне вашего сервера, а так же передавать в JivoSite дополнительную информацию для отображения в приложени оператора в ответе на HTTP-запросы.
+        .section__code.section__part
+      section#javascript-api.page__section.section
+        .section__info.section__part
+          h2.h2 JavaScript API
+          h3.h3 Methods and functions
+          p JivoSite вызывает перечисленные ниже функции на странице, чтобы сообщить о возникновении события. Вы можете объявить на странице любую из этих функций и выполнять в ней логику обработки возникшего события. Например, по событию jivo_onIntroduction вы можете получить введенные клиентом контактные данные.
+          include ../components/table.pug
+        .section__code.section__part
+      section#chatMode.page__section.section
+        .section__info.section__part
+          h3.h3 chatMode
+          p С помощью этого метогода можно получить текущее состояние операторов.
+        .section__code.section__part(data-placeholder="Click on code to copy")
+          pre(data-controller="code-sample" data-action="click->code-sample#copy")
+            code(data-target="code-sample.code" ) jivo_api.chatMode();
+      section#getContactInfo.page__section.section
+        .section__info.section__part
+          h3.h3 getContactInfo
+          p Считывает данные посетителя в виде структуры contact_info, которые посетитель ввел в форме представления. Если посетитель не заполнил какие-либо поля, в их значении будет null.
+        .section__code.section__part(data-placeholder="Click on code to copy")
+          pre(data-controller="code-sample" data-action="click->code-sample#copy")
+            code(data-target="code-sample.code")
+              | function jivo_onCallEnd(res) {
+              |   if (res.result == &apos;ok&apos;) {
+              |   // call finished successfully
+              |   }
+              |   if (res.result == &apos;fail&apos;) {
+              |   // call finished with errors or can not started
+              |   console.log(res.reason); // reason for the unsuccessfull call
+              |   }
+              | }

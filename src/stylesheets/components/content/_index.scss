@@ -1,0 +1,125 @@
+:root {
+  --c-black: #23233b;
+}
+
+//Core styles
+.page__content {
+  position: relative;
+  margin-left: 270px;
+  @media (--s) {
+    margin-left: 0;
+    // padding-top: 93px;
+  }
+  .h1 {
+    max-width: 340px;
+  }
+  h1,
+  h2 {
+    margin-bottom: 25px;
+  }
+  h3 {
+    margin-bottom: 15px;
+  }
+  p {
+    @include rhythm(17, 30);
+    font-weight: 300;
+    color: var(--f-main);
+    @media (--s) {
+      @include rhythm(15, 28);
+    }
+    &+* {
+      margin-top: 30px;
+    }
+    &+p {
+      margin-top: 20px;
+    }
+  }
+  strong {
+    color: var(--c-black);
+  }
+}
+
+.page__section {
+  display: flex;
+  @media (--xl-sm) {
+    flex-direction: column;
+  }
+}
+
+.section__info {
+  width: 65%;
+  background-color: var(--c-white);
+  padding: 25px 60px;
+  @media (--xl-sm) {
+    width: 100%;
+    padding: 12px 30px;
+  }
+  @media (--s) {
+    padding: 12px 10px;
+  }
+}
+
+.section__code {
+  position: relative;
+  width: 35%;
+  background-color: var(--c-violet);
+  color: var(--c-white);
+  @include rhythm(15, 26);
+  @include setTransitionFor(0.2s, opacity);
+  @media (--xl-sm) {
+    width: 100%;
+    &:empty {
+      display: none;
+    }
+  }
+  &:after {
+    @include setTransitionFor(0.2s, opacity);
+    content: attr(data-placeholder);
+    position: absolute;
+    border-radius: 2px;
+    bottom: 13px;
+    right: 10px;
+    width: auto;
+    height: 25px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    line-height: 25px;
+    vertical-align: middle;
+    opacity: 0;
+    font-size: 13px;
+    background-color: var(--c-white);
+    color: var(--c-violet);
+    text-align: center;
+    pointer-events: auto;
+  }
+  &:hover:not(:empty) {
+    opacity: 0.9;
+    cursor: pointer;
+    &:after {
+      opacity: 1;
+    }
+  }
+  pre {
+    padding: 25px 30px;
+    width: 100%;
+    height: 100%;
+  }
+  code {
+    font-family: 'SourceCodePro';
+    font-size: 15px;
+    .hljs-title {
+      color: red;
+    }
+    .hljs-string {
+      color: yellow;
+    }
+  }
+}
+
+.section__part {
+  flex-grow: 1;
+}
+
+//End core styles
+//Mods
+//End mods

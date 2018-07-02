@@ -1,0 +1,13 @@
+mixin sprite(id, classes)
+  - var viewBox = viewbox || "0 0 1 1"
+  - var classes = classes || ""
+  span(class=`${id} ${classes} sprite`)
+    svg(viewbox=viewBox)
+      use(xlink:href=`images/svgSprite.svg#${id}`)
+
+
+mixin spriteForLink(id, classes, link)
+  - var viewBox = viewbox || "0 0 1 1"
+  a.link-as-icon.sprite(href=link, class=`${id}, ${classes}`)
+    svg(viewbox=viewBox)
+      use(xlink:href=`images/svgSprite.svg#${id}`)

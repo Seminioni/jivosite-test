@@ -1,0 +1,26 @@
+aside.page__navbar
+  .logo
+    a.logo__link.link(href="/")
+      img(src="./images/general/icon-logo.svg", alt="")
+    span.logo__text for developers
+  .burger(data-controller="burger" data-action="click->burger#onBurgerClick")
+  nav.nav
+    .nav__section
+      h4.nav__heading.h4 Javascript API
+      ul.nav__links
+        li.nav__link Methods and functions
+        li.nav__link chatMode
+        li.nav__link getContactInfo
+        li.nav__link.is-selected getVisitorNumber
+        li.nav__link setContactInfo
+        li.nav__link setCustomData
+        li.nav__link setRules
+        li.nav__link setUserToken
+        li.nav__link showProactiveInvitation
+    .nav__section
+      h4.nav__heading.h4 Webhooks
+      ul.nav__links
+        li.nav__link Events
+        li.nav__link chat_accepted
+        li.nav__link chat_finished
+        li.nav__link offline_message

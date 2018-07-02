@@ -1,0 +1,7 @@
+.logo__text {
+  display: block;
+  color: #aec1dc;
+  font-family: var(--BrandonText);
+  font-weight: 400;
+  @include rhythm(14,22);
+}

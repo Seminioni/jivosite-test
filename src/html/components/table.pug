@@ -1,0 +1,33 @@
+.table-container
+  table.table(cellspacing="0" cellpadding="0")
+    caption.caption Сallback-функции
+    thead.thead
+      th.th Название
+      th.th Тип
+      th.th Описание
+    tbody.tbody
+      tr.tr
+        td.td
+          a.link(href="#") jivo_onLoadCallback
+        td.td void
+        td.td Вызывается при завершении инициализации виджета JivoSite
+      tr.tr
+        td.td
+          a.link(href="#") jivo_onOpen
+        td.td void
+        td.td Вызывается при открытии окна диалога JivoSite
+      tr.tr
+        td.td
+          a.link(href="#") jivo_onClose
+        td.td void
+        td.td Сворачивание окна диалога JivoSite
+      tr.tr
+        td.td
+          a.link(href="#") jivo_onIntroduction
+        td.td void
+        td.td Посетитель ввёл контактные данные
+      tr.tr
+        td.td
+          a.link(href="#") jivo_onResizeCallback
+        td.td void
+        td.td Коллбек, срабатывающий при любом изменении размеров виджета

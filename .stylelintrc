@@ -1,0 +1,57 @@
+{
+  "rules": {
+    "indentation": 2,
+    "color-named": "never",
+    "block-no-empty": null,
+    "number-leading-zero": "always",
+    "string-quotes": "double",
+    "selector-pseudo-element-colon-notation": "single",
+    "no-duplicate-selectors": true,
+    "color-hex-case": "lower",
+    "color-hex-length": "long",
+    "selector-combinator-space-after": "always",
+    "selector-attribute-quotes": "always",
+    "selector-attribute-operator-space-before": "always",
+    "selector-attribute-operator-space-after": "always",
+    "selector-attribute-brackets-space-inside": "always",
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-colon-space-before": "never",
+    "declaration-colon-space-after": "always",
+    "property-no-vendor-prefix": true,
+    "value-no-vendor-prefix": true,
+    "function-url-quotes": "always",
+    "font-family-name-quotes": "always-unless-keyword",
+    "comment-whitespace-inside": "always",
+    "comment-empty-line-before": "always",
+    "at-rule-no-vendor-prefix": true,
+    "selector-pseudo-class-parentheses-space-inside": "never",
+    "selector-no-vendor-prefix": true,
+    "media-feature-range-operator-space-before": "always",
+    "media-feature-range-operator-space-after": "always",
+    "media-feature-parentheses-space-inside": "always",
+    "media-feature-name-no-vendor-prefix": true,
+    "media-feature-colon-space-before": "never",
+    "media-feature-colon-space-after": "always",
+    "selector-class-pattern": null,
+    "max-nesting-depth": 4,
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "ignore": [
+          "inside-block",
+          "after-comment"
+        ]
+      }
+    ]
+  },
+  "ignoreFiles": [
+    "./src/static/scss/vars.scss",
+    "./src/static/scss/fonts.scss",
+    "./src/static/scss/mixins.scss",
+    "./src/static/scss/_family.scss",
+    "./src/static/scss/_mappy-breakpoints.scss",
+    "./src/static/scss/normalize.scss",
+    "./src/static/scss/separate-css/*",
+    "./build/css/main.css.map",
+  ]
+}

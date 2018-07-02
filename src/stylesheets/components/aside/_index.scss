@@ -1,0 +1,38 @@
+//Core styles
+
+.page__navbar {
+  background-color: var(--c-grey);
+  padding: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 270px;
+  border-right: 1px solid var(--c-grey);
+  @media (--s) {
+    border-bottom: 1px solid #dae3f0;
+    border-right: none;
+    position: static;
+    width: 100%;
+    padding: 15px 20px;
+    max-height: 83px;
+    overflow: hidden;
+    &.is-pressed {
+      max-height: 100%;
+    }
+  }
+  .logo {
+    margin-bottom: 30px;
+    @media (--s) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+//End core styles
+//Mods
+//End mods

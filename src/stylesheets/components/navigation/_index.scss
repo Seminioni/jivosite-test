@@ -1,0 +1,44 @@
+:root {
+  --c-item: #6b7b93;
+  --c-item-bg-on-select: #00bf59;
+  --c-item-on-hover: #eff2f8;
+}
+
+//Core styles
+.nav {
+  @media (--s) {
+    // display: none;
+  }
+}
+
+.nav__section {
+  &+& {
+    margin-top: 50px;
+  }
+}
+
+.nav__heading {
+  font-family: var(--BrandonText);
+}
+
+.nav__link {
+  @include rhythm(15, 26);
+  @include setTransitionFor(0.2s, background, color);
+  color: var(--c-item);
+  font-weight: 300;
+  padding: 6px 22px;
+  border-radius: 2px;
+  &:hover {
+    background-color: var(--c-item-on-hover);
+    color: var(--c-item);
+    cursor: pointer;
+  }
+  &.is-selected {
+    background-color: var(--c-item-bg-on-select);
+    color: var(--c-white);
+  }
+}
+
+//End core styles
+//Mods
+//End mods

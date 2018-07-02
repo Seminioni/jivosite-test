@@ -1,0 +1,16 @@
+// Variables
+:root {
+  --c-white: #FFFFFF;
+  --c-black: #000000;
+  --c-grey: #f9fafc;
+  --f-main: #6b7b93;
+  --c-violet: #23233b;
+  --SourceCodePro: "SourceCodePro";
+  --Circe: "Circe";
+  --BrandonText: "BrandonText";
+}
+
+@custom-media --s (width <= 768px);
+@custom-media --m (min-width: 769px);
+@custom-media --xl (min-width: 1025px);
+@custom-media --xl-sm (width <= 1025px);

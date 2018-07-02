@@ -1,0 +1,12 @@
+// Rhythm mixin
+@mixin rhythm($sizeValue, $heightValue) {
+  font-size: $sizeValue + px;
+  line-height: $heightValue / $sizeValue;
+}
+
+// Set transition for
+@mixin setTransitionFor($time: 0.2s, $properties...) {
+  transition-timing-function: ease-in-out;
+  transition-duration: $time;
+  transition-property: $properties;
+}

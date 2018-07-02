@@ -1,0 +1,27 @@
+@import "burger";
+//Core styles
+.burger {
+  @include burger(30px, 2px, 6px, #444);
+  position: absolute;
+  right: 20px;
+  top: 37px;
+  opacity: 0;
+  visibility: hidden;
+  &.is-active {
+    background-color: transparent;
+    &:before {
+      transform: translateY(8px) rotate(45deg);
+    }
+    &:after {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+  @media (--s) {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+//End core styles
+//Mods
+//End mods

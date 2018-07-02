@@ -1,0 +1,46 @@
+// App styles, imports etc...
+@import-normalize;
+@import "utils/vars";
+@import "utils/sprite/sprite";
+@import "utils/mixins/entry";
+@import "utils/resets";
+@import "utils/links";
+@import "utils/GUI";
+// Components
+@import "components/aside/index";
+@import "components/logo/index";
+@import "components/navigation/index";
+@import "components/content/index";
+@import "components/table/index";
+@import "components/burger/index";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-family: var(--Circe), Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+.container {
+  max-width: 990px;
+  margin: auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media (--s) {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+}
+
+
+

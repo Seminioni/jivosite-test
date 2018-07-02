@@ -1,0 +1,49 @@
+:root {
+  --c-table-borders: #e0e6ed;
+}
+
+//Core styles
+.table {
+  text-align: left;
+  color: var(--f-main);
+  border: 1px solid var(--c-table-borders);
+  font-weight: 300;
+  width: 100%;
+  @media (--s) {
+    font-size: 13px;
+  }
+  .link {
+    @include setTransitionFor(0.2s, opacity);
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.caption {
+  text-align: left;
+  font-size: 15px;
+}
+
+.th, .td {
+  padding: 15px 20px;
+  font-weight: inherit;
+
+  @media (--s) {
+    padding: 10px 7px;
+  }
+}
+
+.th {
+  @include rhythm(17, 30);
+  background-color: var(--c-grey);
+  border-bottom: 1px solid var(--c-table-borders);
+}
+
+.td {
+  color: inherit;
+}
+
+//End core styles
+//Mods
+//End mods
